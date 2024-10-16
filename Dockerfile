@@ -1,8 +1,8 @@
 # Use a base image with Java JDK 21
-FROM openjdk:21-jdk AS build
+FROM openjdk:21-jdk
 
 # Set the working directory
-WORKDIR /app
+#WORKDIR /app
 
 # Copy the Maven or Gradle build files
 #COPY pom.xml ./
@@ -18,10 +18,13 @@ WORKDIR /app
 #WORKDIR /app
 #
 ## Copy the built JAR file from the build stage
-COPY --from=build /app/target/*.jar chatbot-raqamiUniverse.jar
+#COPY --from=build /app/target/*.jar chatbot-raqamiUniverse.jar
+#COPY
 
+ADD ./chatbot-raqamiUniverse.jar chatbot-raqamiUniverse.jar
+ENTRYPOINT ["java","-jar","chatbot-raqamiUniverse.jar"]
 # Expose the application port
-EXPOSE 8080
-
-# Command to run the application
-ENTRYPOINT ["java", "-jar", "chatbot-raqamiUniverse.jar"]
+#EXPOSE 8080
+#
+## Command to run the application
+#ENTRYPOINT ["java", "-jar", "chatbot-raqamiUniverse.jar"]
