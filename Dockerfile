@@ -12,7 +12,7 @@ COPY src ./src
 RUN ./mvnw clean package -DskipTests
 
 # Create a new stage for the final image
-FROM openjdk:21-jre-slim
+FROM openjdk:21-jre
 
 # Set the working directory
 WORKDIR /app
