@@ -102,7 +102,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		<finalName>chatbot-omicronUniverse</finalName>
+		<finalName>chatbot-raqamiUniverse</finalName>
 	</build>
 	<repositories>
 		<repository>
