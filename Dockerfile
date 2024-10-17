@@ -21,7 +21,7 @@ WORKDIR /app
 #COPY --from=build /app/target/*.jar chatbot-raqamiUniverse.jar
 #COPY
 
-COPY /app/target/chatbot-raqamiUniverse.jar chatbot-raqamiUniverse.jar
+COPY target/chatbot-raqamiUniverse.jar chatbot-raqamiUniverse.jar
 
 ENTRYPOINT ["java","-jar","chatbot-raqamiUniverse.jar"]
 # Expose the application port
