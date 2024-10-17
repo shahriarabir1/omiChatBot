@@ -2,7 +2,7 @@
 FROM openjdk:21-jdk
 
 # Set the working directory
-#WORKDIR /app
+WORKDIR /app
 
 # Copy the Maven or Gradle build files
 #COPY pom.xml ./
@@ -21,7 +21,7 @@ FROM openjdk:21-jdk
 #COPY --from=build /app/target/*.jar chatbot-raqamiUniverse.jar
 #COPY
 
-ADD target/chatbot-raqamiUniverse.jar chatbot-raqamiUniverse.jar
+COPY /app/target/chatbot-raqamiUniverse.jar chatbot-raqamiUniverse.jar
 
 ENTRYPOINT ["java","-jar","chatbot-raqamiUniverse.jar"]
 # Expose the application port
