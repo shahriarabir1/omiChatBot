@@ -15,4 +15,8 @@ public class PromptController {
     public String generate(@RequestParam String message){
        return llamaAiService.generateResult(message);
     }
+    @GetMapping("/")
+    public String home(){
+        return "Shahriar Abir";
+    }
 }
