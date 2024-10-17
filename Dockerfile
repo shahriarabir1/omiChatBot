@@ -2,7 +2,7 @@
 FROM openjdk:21-jdk
 
 # Set the working directory
-WORKDIR /app
+#WORKDIR /app
 
 # Copy the Maven or Gradle build files
 #COPY pom.xml ./
