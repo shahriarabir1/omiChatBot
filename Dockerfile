@@ -21,7 +21,7 @@ WORKDIR /app
 #COPY --from=build /app/target/*.jar chatbot-raqamiUniverse.jar
 #COPY
 
-COPY target/chatbot-raqamiUniverse.jar /app/chatbot-raqamiUniverse.jar
+ADD ./chatbot-raqamiUniverse.jar /app/chatbot-raqamiUniverse.jar
 
 CMD ["java","-jar","/app/chatbot-raqamiUniverse.jar"]
 # Expose the application port
