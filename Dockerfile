@@ -22,6 +22,14 @@ FROM openjdk:21-jdk
 #COPY
 
 ADD ./chatbot-raqamiUniverse.jar chatbot-raqamiUniverse.jar
+RUN apt-get update && apt-get install -y \
+    curl \
+    && curl -sSL https://ollama.com/download.sh | sh
+
+# Run the Llama 2 model in the background
+# This command will run Ollama with the Llama 2 model
+# Adjust the command based on how you intend to use the model
+CMD ["ollama", "run", "llama2"]
 ENTRYPOINT ["java","-jar","chatbot-raqamiUniverse.jar"]
 # Expose the application port
 #EXPOSE 8080
