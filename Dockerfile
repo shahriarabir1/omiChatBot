@@ -21,9 +21,9 @@ FROM openjdk:21-jdk
 #COPY --from=build /app/target/*.jar chatbot-raqamiUniverse.jar
 #COPY
 
-ADD /target/chatbot-raqamiUniverse.jar chatbot-raqamiUniverse.jar
+COPY /target/chatbot-raqamiUniverse.jar chatbot-raqamiUniverse.jar
 
-ENTRYPOINT ["java","-jar","/target/chatbot-raqamiUniverse.jar"]
+CMD ["java","-jar","/target/chatbot-raqamiUniverse.jar"]
 # Expose the application port
 #EXPOSE 8080
 #
