@@ -23,7 +23,7 @@ FROM openjdk:21-jdk
 
 ADD target/chatbot-raqamiUniverse.jar chatbot-raqamiUniverse.jar
 
-ENTRYPOINT ["java","-jar","chatbot-raqamiUniverse.jar"]
+ENTRYPOINT ["java","-jar","/target/chatbot-raqamiUniverse.jar"]
 # Expose the application port
 #EXPOSE 8080
 #
